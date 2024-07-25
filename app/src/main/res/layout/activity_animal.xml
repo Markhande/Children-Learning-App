@@ -18,7 +18,7 @@
         android:focusable="true">
 
         <ImageView
-            android:id="@+id/playSoundButton"
+            android:id="@+id/dog"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:background="@drawable/dog"/>
@@ -29,9 +29,41 @@
             android:layout_height="60dp"
             android:layout_marginLeft="25dp"
             android:background="@drawable/cat"/>
+        <ImageView
+            android:id="@+id/cow"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/cow"/>
+    </LinearLayout>
+<!--        Second Section  -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="170dp"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true">
 
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/tiger"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/tiger"/>
 
-
+        <ImageView
+            android:id="@+id/elephant"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/elephant"/>
+        <ImageView
+            android:id="@+id/monkey"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/monkey"/>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
