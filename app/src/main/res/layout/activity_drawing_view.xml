@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".DrawingActivity">
+
+    <FrameLayout
+        android:id="@+id/drawing_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnRed"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:text="Red"
+            android:textSize="8dp"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/btnGreen"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:text="Green"
+            android:textSize="7dp"
+            android:background="#00FF00"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/btnBlue"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:textSize="7dp"
+            android:text="Blue"
+            android:background="#0000FF"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="60dp"
+            android:layout_height="46dp"
+            android:textSize="7dp"
+            android:text="Clear"
+            android:textColor="#FFFFFF"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
