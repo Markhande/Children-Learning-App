@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +14,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Animal extends AppCompatActivity {
-    Button button;
+    ImageView button;
     private MediaPlayer mediaPlayer;
+    ImageView cat;
+    private MediaPlayer cat_sound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +25,11 @@ public class Animal extends AppCompatActivity {
         setContentView(R.layout.activity_animal);
 
         button= findViewById(R.id.playSoundButton);
-        mediaPlayer = MediaPlayer.create(this, R.raw.audio);
+        cat= findViewById(R.id.cat);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.dog);
+        cat_sound =   MediaPlayer.create(this,R.raw.cat);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,16 +39,15 @@ public class Animal extends AppCompatActivity {
                 }
             }
 
-
+        });
+        cat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cat_sound != null){
+                    cat_sound.start();
+                }
+            }
         });
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        // Release MediaPlayer resources
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
-    }
+
 }
