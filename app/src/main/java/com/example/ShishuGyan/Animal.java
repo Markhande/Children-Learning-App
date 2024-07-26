@@ -29,6 +29,16 @@ public class Animal extends AppCompatActivity {
     private MediaPlayer snake_sound;
     ImageView fox;
     private MediaPlayer fox_sound;
+    ImageView zebra;
+    private MediaPlayer zebra_sound;
+    ImageView goat;
+    private MediaPlayer goat_sound;
+    ImageView giraffe;
+    private MediaPlayer giraffe_sound;
+    ImageView donkey;
+    private MediaPlayer donkey_sound;
+    ImageView eagle;
+    private MediaPlayer eagle_sound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +55,11 @@ public class Animal extends AppCompatActivity {
         bull=findViewById(R.id.bull);
         Snake=findViewById(R.id.snake);
         fox=findViewById(R.id.fox);
+        zebra = findViewById(R.id.zebbra);
+        goat= findViewById(R.id.goat);
+        giraffe=findViewById(R.id.giraffe);
+        donkey=findViewById(R.id.donkey);
+        eagle=findViewById(R.id.eagle);
 
         mediaPlayer =  MediaPlayer.create(this, R.raw.dog);
         cat_sound   =  MediaPlayer.create(this,R.raw.cat);
@@ -56,6 +71,11 @@ public class Animal extends AppCompatActivity {
         bull_sound = MediaPlayer.create(this,R.raw.bull);
         snake_sound = MediaPlayer.create(this,R.raw.snake);
         fox_sound = MediaPlayer.create(this,R.raw.fox);
+        zebra_sound = MediaPlayer.create(this,R.raw.zebra);
+        goat_sound= MediaPlayer.create(this,R.raw.goat);
+        giraffe_sound= MediaPlayer.create(this,R.raw.giraffe);
+        donkey_sound=MediaPlayer.create(this,R.raw.donkey);
+        eagle_sound=MediaPlayer.create(this,R.raw.eagle);
 
         dog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +149,40 @@ public class Animal extends AppCompatActivity {
             public void onClick(View view) {
                 if (fox != null)
                     fox_sound.start();
+            }
+        });
+        zebra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                zebra_sound.start();
+            }
+        });
+        goat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(goat_sound != null)
+                    goat_sound.start();
+            }
+        });
+        giraffe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(giraffe_sound != null)
+                giraffe_sound.start();
+            }
+        });
+        donkey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(donkey_sound != null)
+                    donkey_sound.start();
+            }
+        });
+        eagle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(eagle_sound != null)
+                    eagle_sound.start();
             }
         });
     }

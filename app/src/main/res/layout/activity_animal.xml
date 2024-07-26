@@ -7,7 +7,9 @@
     android:layout_marginTop="35dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="654dp"
@@ -21,10 +23,9 @@
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:hint="DONKEY"
-            app:layout_constraintEnd_toEndOf="@+id/imageView14"
-            app:layout_constraintHorizontal_bias="0.485"
-            app:layout_constraintStart_toStartOf="@+id/imageView14"
-            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+            app:layout_constraintEnd_toEndOf="@+id/donkey"
+            app:layout_constraintStart_toStartOf="@+id/donkey"
+            app:layout_constraintTop_toBottomOf="@+id/donkey" />
 
         <ImageView
             android:id="@+id/dog"
@@ -127,19 +128,18 @@
             android:layout_width="55dp"
             android:layout_height="20dp"
             android:hint="GIRAFFE"
-            app:layout_constraintEnd_toEndOf="@+id/imageView13"
-            app:layout_constraintStart_toStartOf="@+id/imageView13"
-            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+            app:layout_constraintEnd_toEndOf="@+id/giraffe"
+            app:layout_constraintStart_toStartOf="@+id/giraffe"
+            app:layout_constraintTop_toBottomOf="@+id/giraffe" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="45dp"
             android:layout_height="20dp"
             android:hint="EAGLE"
-            app:layout_constraintEnd_toEndOf="@+id/imageView15"
-            app:layout_constraintHorizontal_bias="0.485"
-            app:layout_constraintStart_toStartOf="@+id/imageView15"
-            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+            app:layout_constraintEnd_toEndOf="@+id/eagle"
+            app:layout_constraintStart_toStartOf="@+id/eagle"
+            app:layout_constraintTop_toBottomOf="@+id/eagle" />
 
         <TextView
             android:id="@+id/fox_name"
@@ -151,6 +151,7 @@
             app:layout_constraintTop_toBottomOf="@+id/zebbra" />
 
         <TextView
+            android:id="@+id/textView16"
             android:layout_width="45dp"
             android:layout_height="20dp"
             android:hint="ZEBRA"
@@ -184,13 +185,12 @@
             android:layout_width="45dp"
             android:layout_height="20dp"
             android:hint="GOAT"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintHorizontal_bias="0.542"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintEnd_toEndOf="@+id/goat"
+            app:layout_constraintStart_toStartOf="@+id/goat"
+            app:layout_constraintTop_toBottomOf="@+id/goat" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/goat"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:background="@drawable/goat"
@@ -199,7 +199,7 @@
             app:layout_constraintTop_toTopOf="@+id/zebbra" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/giraffe"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_marginTop="32dp"
@@ -211,22 +211,22 @@
             app:layout_constraintTop_toBottomOf="@+id/fox" />
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/donkey"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:background="@drawable/donkey"
             android:clickable="true"
             app:layout_constraintStart_toStartOf="@+id/zebbra"
-            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+            app:layout_constraintTop_toTopOf="@+id/giraffe" />
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/eagle"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:background="@drawable/eagle"
             android:clickable="true"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView14" />
+            app:layout_constraintStart_toStartOf="@+id/goat"
+            app:layout_constraintTop_toTopOf="@+id/donkey" />
 
         <ImageView
             android:id="@+id/bull"
@@ -315,6 +315,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cat" />
 
         <TextView
+            android:id="@+id/textView17"
             android:layout_width="35dp"
             android:layout_height="20dp"
             android:layout_marginStart="24dp"
@@ -326,5 +327,5 @@
             app:layout_constraintTop_toBottomOf="@+id/cow" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </ScrollView>
 </androidx.cardview.widget.CardView>
