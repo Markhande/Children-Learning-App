@@ -2,168 +2,238 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_margin="16dp"
     card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="4dp">
+    card_view:cardElevation="4dp"
+    android:background="@drawable/monkey">
 
-    <LinearLayout
-        android:id="@+id/layout_1"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/animals_icon"
-        android:orientation="vertical"
-        android:layout_marginTop="85dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/card_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ANIMALS"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/card_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Find Your Animal."
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/text_1"
-            android:textSize="14sp" />
-    </LinearLayout>
-<!--    Second Card Multiple table -->
-    <LinearLayout
-        android:id="@+id/table_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/table"
-        android:orientation="vertical"
-        android:layout_marginTop="190dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/animals_icon"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MULTIPLE TABLE"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ANIMALS"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="You find any number of multiple table."
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/text_1"
-            android:textSize="14sp" />
-    </LinearLayout>
-<!--                        third layout                    -->
-    <LinearLayout
-        android:id="@+id/story_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/story"
-        android:orientation="vertical"
-        android:layout_marginTop="295dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+                <TextView
+                    android:id="@+id/card_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Find Your Animal."
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="STORY TIME"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/table"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Story Makes you better"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/text_1"
-            android:textSize="14sp" />
-    </LinearLayout>
-<!--        fourth layout-->
-    <LinearLayout
-        android:id="@+id/drawing_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/drawing"
-        android:orientation="vertical"
-        android:layout_marginTop="400dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MULTIPLE TABLE"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DRAWING"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="You find any number of multiple table."
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Make your Creativity"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/text_1"
-            android:textSize="14sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/story_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/story"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
 
-<!--    fifty layout-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STORY TIME"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-    <LinearLayout
-        android:id="@+id/games_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/games"
-        android:orientation="vertical"
-        android:layout_marginTop="507dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Story Makes you better"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GAMES"
-            android:textColor="@android:color/white"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/drawing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/drawing"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Improve the brain with games"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/text_1"
-            android:textSize="14sp" />
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DRAWING"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Make your Creativity"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/games_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/games"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GAMES"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Improve the brain with games"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/games"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GAMES"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Improve the brain with games"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/games"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CALCULATOR"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Improve the brain with games"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.cardview.widget.CardView>

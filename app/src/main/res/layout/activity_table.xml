@@ -5,38 +5,63 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    tools:context=".Table">
 
+    <!-- Add a title for the screen -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Multiplication Table"
+        android:textColor="@color/primary_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Input field for the table number -->
     <EditText
         android:id="@+id/inputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:hint="Enter Table Number"
-        android:layout_marginTop="90dp"
         android:inputType="number"
-        />
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/primary_text"
+        android:textSize="18sp" />
+
+    <!-- Button to submit the input -->
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="get table"
-        android:layout_below="@id/inputText"
-        android:layout_margin="10dp"
-        android:layout_centerHorizontal="true"
+        android:text="Get Table"
         android:layout_gravity="center_horizontal"
-        />
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp" />
 
-    <TextView
-        android:id="@+id/outputText"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="500dp"
-        android:layout_below="@id/submitButton"
-        android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-10dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="40sp" />
+    <!-- Output field for the multiplication table -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/output_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp" />
+    </ScrollView>
 </LinearLayout>

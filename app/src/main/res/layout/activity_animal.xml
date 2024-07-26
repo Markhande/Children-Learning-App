@@ -1,69 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    card_view:cardCornerRadius="8dp"
-    card_view:cardElevation="4dp">
+    android:layout_marginTop="35dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <LinearLayout
-        android:id="@+id/layout_1"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="85dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="654dp"
+        android:layout_marginTop="30dp"
+        android:padding="16dp">
 
+        <!-- First Row -->
         <ImageView
             android:id="@+id/dog"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:background="@drawable/dog"/>
+            android:background="@drawable/dog"
+            app:layout_constraintEnd_toStartOf="@+id/cat"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/cat"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/cat"/>
+            android:layout_marginStart="16dp"
+            android:background="@drawable/cat"
+            app:layout_constraintEnd_toStartOf="@+id/cow"
+            app:layout_constraintStart_toEndOf="@id/dog"
+            app:layout_constraintTop_toTopOf="@id/dog" />
+
         <ImageView
             android:id="@+id/cow"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/cow"/>
-    </LinearLayout>
-<!--        Second Section  -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="170dp"
-        android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
+            android:layout_marginStart="16dp"
+            android:background="@drawable/cow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cat"
+            app:layout_constraintTop_toTopOf="@id/dog" />
+
+        <!-- Second Row -->
+
+        <!-- third row -->
+
+        <!--Second Section  -->
 
         <ImageView
-            android:id="@+id/tiger"
+            android:id="@+id/imageView3"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:background="@drawable/tiger"/>
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bull"
+            app:layout_constraintEnd_toStartOf="@+id/elephant"
+            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/lion"
+            app:layout_constraintEnd_toStartOf="@+id/cat"
+            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tiger" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/zebra"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.623"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/elephant"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/elephant"/>
+            android:layout_marginStart="16dp"
+            android:background="@drawable/elephant"
+            app:layout_constraintEnd_toStartOf="@+id/monkey"
+            app:layout_constraintStart_toEndOf="@id/tiger"
+            app:layout_constraintTop_toTopOf="@+id/tiger" />
+
+        <ImageView
+            android:id="@+id/tiger"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/tiger"
+            app:layout_constraintEnd_toStartOf="@+id/elephant"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dog" />
+
         <ImageView
             android:id="@+id/monkey"
             android:layout_width="80dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="25dp"
-            android:background="@drawable/monkey"/>
-    </LinearLayout>
+            android:layout_marginStart="16dp"
+            android:background="@drawable/monkey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/elephant"
+            app:layout_constraintTop_toTopOf="@+id/tiger" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@id/cat"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/fox"
+            app:layout_constraintEnd_toStartOf="@+id/cow"
+            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintStart_toEndOf="@id/dog"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/snake"
+            app:layout_constraintEnd_toStartOf="@+id/monkey"
+            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintStart_toEndOf="@id/tiger"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:hint="DOG"
+            app:layout_constraintBottom_toTopOf="@+id/tiger"
+            app:layout_constraintEnd_toEndOf="@+id/dog"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/dog"
+            app:layout_constraintTop_toBottomOf="@+id/dog"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:hint="TIGER"
+            app:layout_constraintEnd_toEndOf="@+id/tiger"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@+id/tiger"
+            app:layout_constraintTop_toBottomOf="@+id/tiger" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:hint="LION"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:hint="BULL"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:hint="SNAKE"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:hint="ZEBRA"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:hint="FOX"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:hint="BEAR"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:layout_width="66dp"
+            android:layout_height="20dp"
+            android:hint="ELIPHANT"
+            app:layout_constraintEnd_toEndOf="@+id/elephant"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@+id/elephant"
+            app:layout_constraintTop_toBottomOf="@+id/elephant" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:hint="MONKEY"
+            app:layout_constraintEnd_toEndOf="@+id/monkey"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="@+id/monkey"
+            app:layout_constraintTop_toBottomOf="@+id/monkey" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:hint="CAT"
+            app:layout_constraintEnd_toEndOf="@+id/cat"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/cat"
+            app:layout_constraintTop_toBottomOf="@+id/cat" />
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:hint="COW"
+            app:layout_constraintEnd_toEndOf="@+id/cow"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/cow"
+            app:layout_constraintTop_toBottomOf="@+id/cow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
