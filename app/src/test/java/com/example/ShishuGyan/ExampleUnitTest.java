@@ -1,4 +1,4 @@
-package com.example.playin;
+package com.example.ShishuGyan;
 
 import org.junit.Test;
 

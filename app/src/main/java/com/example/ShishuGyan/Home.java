@@ -1,4 +1,4 @@
-package com.example.playin;
+package com.example.ShishuGyan;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,6 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class Home extends AppCompatActivity {
     LinearLayout layout;
@@ -64,7 +61,7 @@ public class Home extends AppCompatActivity {
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(), com.example.playin.games.class);
+                Intent intent=new Intent(getApplicationContext(), com.example.ShishuGyan.games.class);
                 startActivity(intent);
             }
         });

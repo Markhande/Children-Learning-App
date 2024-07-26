@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.playin'
+    namespace 'com.example.ShishuGyan'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.playin"
+        applicationId "com.example.ShishuGyan"
         minSdk 26
         targetSdk 34
         versionCode 1

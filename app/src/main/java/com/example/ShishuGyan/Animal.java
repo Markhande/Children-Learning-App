@@ -1,19 +1,12 @@
-package com.example.playin;
+package com.example.ShishuGyan;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-import java.security.PrivateKey;
 
 public class Animal extends AppCompatActivity {
     ImageView dog;
@@ -28,6 +21,14 @@ public class Animal extends AppCompatActivity {
     private MediaPlayer elephant_sound;
     ImageView monkey;
     private MediaPlayer mokey_sound;
+    ImageView lion;
+    private  MediaPlayer lion_sound;
+    ImageView bull;
+    private  MediaPlayer bull_sound;
+    ImageView Snake;
+    private MediaPlayer snake_sound;
+    ImageView fox;
+    private MediaPlayer fox_sound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,10 @@ public class Animal extends AppCompatActivity {
         tiger=findViewById(R.id.tiger);
         elephant=findViewById(R.id.elephant);
         monkey =findViewById(R.id.monkey);
+        lion=findViewById(R.id.lion);
+        bull=findViewById(R.id.bull);
+        Snake=findViewById(R.id.snake);
+        fox=findViewById(R.id.fox);
 
         mediaPlayer =  MediaPlayer.create(this, R.raw.dog);
         cat_sound   =  MediaPlayer.create(this,R.raw.cat);
@@ -47,6 +52,10 @@ public class Animal extends AppCompatActivity {
         tiger_sound =  MediaPlayer.create(this,R.raw.tiger);
         elephant_sound = MediaPlayer.create(this, R.raw.elephant);
         mokey_sound = MediaPlayer.create(this, R.raw.monkey);
+        lion_sound = MediaPlayer.create(this,R.raw.lion);
+        bull_sound = MediaPlayer.create(this,R.raw.bull);
+        snake_sound = MediaPlayer.create(this,R.raw.snake);
+        fox_sound = MediaPlayer.create(this,R.raw.fox);
 
         dog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +101,34 @@ public class Animal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mokey_sound.start();
+            }
+        });
+        lion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(lion_sound != null)
+                lion_sound.start();
+            }
+        });
+        bull.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(bull_sound != null)
+                bull_sound.start();
+            }
+        });
+        Snake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(bull_sound != null)
+                snake_sound.start();
+            }
+        });
+        fox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (fox != null)
+                    fox_sound.start();
             }
         });
     }

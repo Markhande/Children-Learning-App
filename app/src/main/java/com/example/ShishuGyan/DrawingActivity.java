@@ -1,4 +1,4 @@
-package com.example.playin;
+package com.example.ShishuGyan;
 
 import android.graphics.Color;
 import android.os.Bundle;

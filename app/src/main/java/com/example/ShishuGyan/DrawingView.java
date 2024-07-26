@@ -1,4 +1,4 @@
-package com.example.playin;
+package com.example.ShishuGyan;
 
 import android.content.Context;
 import android.graphics.Canvas;
