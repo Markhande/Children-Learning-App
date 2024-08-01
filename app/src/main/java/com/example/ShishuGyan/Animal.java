@@ -9,36 +9,16 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Animal extends AppCompatActivity {
-    ImageView dog;
-    private MediaPlayer mediaPlayer;
-    ImageView cat;
-    private MediaPlayer cat_sound;
-    ImageView cow;
-    private MediaPlayer cow_sound;
-    ImageView tiger;
-    private MediaPlayer tiger_sound;
-    ImageView elephant;
-    private MediaPlayer elephant_sound;
-    ImageView monkey;
-    private MediaPlayer mokey_sound;
-    ImageView lion;
-    private  MediaPlayer lion_sound;
-    ImageView bull;
-    private  MediaPlayer bull_sound;
-    ImageView Snake;
-    private MediaPlayer snake_sound;
-    ImageView fox;
-    private MediaPlayer fox_sound;
-    ImageView zebra;
-    private MediaPlayer zebra_sound;
-    ImageView goat;
-    private MediaPlayer goat_sound;
-    ImageView giraffe;
-    private MediaPlayer giraffe_sound;
-    ImageView donkey;
-    private MediaPlayer donkey_sound;
-    ImageView eagle;
-    private MediaPlayer eagle_sound;
+    ImageView
+    dog,    cat,    cow,    tiger,  elephant,   monkey,
+    lion,   bull,   Snake,  fox,    zebra,      goat,
+    giraffe,donkey, eagle;
+    private MediaPlayer
+    mediaPlayer,    cat_sound,      cow_sound,      tiger_sound,
+    elephant_sound, mokey_sound,    lion_sound,     bull_sound,
+    snake_sound,    fox_sound,      zebra_sound,    goat_sound,
+    giraffe_sound,  donkey_sound,   eagle_sound;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

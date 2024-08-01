@@ -23,7 +23,7 @@ public class games extends AppCompatActivity {
         // Force links and redirects to open in WebView instead of a browser
         webview.setWebViewClient(new WebViewClient());
 
-        webview.loadUrl("https://poki.com/en/g/subway-surfers#fullscreen");
+        webview.loadUrl("https://www.disney.in/");
     }
     public void onBackPressed() {
         if (webview.canGoBack()) {
