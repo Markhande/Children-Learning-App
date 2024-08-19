@@ -9,11 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity {
-    LinearLayout layout;
-    LinearLayout table;
-    LinearLayout story;
-    LinearLayout  drawing;
-    LinearLayout games;
+    LinearLayout layout,table,story,drawing,games,wiki;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +21,7 @@ public class Home extends AppCompatActivity {
         story=findViewById(R.id.story_layout);
         drawing=findViewById(R.id.drawing_layout);
         games=findViewById(R.id.games_layout);
+        wiki =findViewById(R.id.wiki_layout);
 
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +59,13 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(), com.example.ShishuGyan.games.class);
+                startActivity(intent);
+            }
+        });
+        wiki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),com.example.ShishuGyan.wiki.class);
                 startActivity(intent);
             }
         });
