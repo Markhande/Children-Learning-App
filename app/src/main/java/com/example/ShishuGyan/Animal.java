@@ -14,7 +14,7 @@ public class Animal extends AppCompatActivity {
     ImageView
             dog,    cat,    cow,    tiger,  elephant,   monkey,
             lion,   bull,   Snake,  fox,    zebra,      goat,
-            giraffe,donkey, eagle;
+            giraffe,donkey, eagle, gollia, alligator, crow;
 
     private MediaPlayer currentMediaPlayer;
     Vibrator vibrate;
@@ -40,6 +40,9 @@ public class Animal extends AppCompatActivity {
         giraffe = findViewById(R.id.giraffe);
         donkey = findViewById(R.id.donkey);
         eagle = findViewById(R.id.eagle);
+        gollia = findViewById(R.id.gollia);
+        alligator = findViewById(R.id.Alligator);
+        crow = findViewById(R.id.crow);
 
         vibrate = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
@@ -158,27 +161,49 @@ public class Animal extends AppCompatActivity {
         eagle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playAnimalSound(R.raw.eagle);
                 performVibration();
+                playAnimalSound(R.raw.eagle);
+            }
+        });
+
+        gollia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performVibration();
+                playAnimalSound(R.raw.gorilla);
+            }
+        });
+
+        alligator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performVibration();
+                playAnimalSound(R.raw.alligator);
+            }
+        });
+
+        crow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performVibration();
+                playAnimalSound(R.raw.crow);
             }
         });
     }
-
-    private void playAnimalSound(int soundResource) {
-        // Stop and release the current MediaPlayer if it's playing
-        if (currentMediaPlayer != null) {
+    private void playAnimalSound(int resource)
+    {
+        if(currentMediaPlayer != null)
+        {
             currentMediaPlayer.stop();
             currentMediaPlayer.release();
         }
-
-        // Create and start a new MediaPlayer instance
-        currentMediaPlayer = MediaPlayer.create(this, soundResource);
-        currentMediaPlayer.start();
+            currentMediaPlayer = MediaPlayer.create(this, resource);
+            currentMediaPlayer.start();
     }
-
     private void performVibration() {
         if (vibrate != null) {
-            VibrationEffect vibrationEffect = VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE);
+            VibrationEffect vibrationEffect
+            = VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE);
             vibrate.vibrate(vibrationEffect);
         }
     }
