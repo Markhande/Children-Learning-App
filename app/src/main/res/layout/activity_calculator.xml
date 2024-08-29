@@ -40,78 +40,95 @@
         <Button
             android:id="@+id/btnSeven"
             android:text="7"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnEight"
             android:text="8"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnNine"
             android:text="9"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnDivide"
             android:text="/"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
 
         <!-- Row 2 -->
         <Button
             android:id="@+id/btnFour"
             android:text="4"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnFive"
             android:text="5"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnSix"
             android:text="6"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnMultiply"
             android:text="*"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
 
         <!-- Row 3 -->
         <Button
             android:id="@+id/btnOne"
             android:text="1"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnTwo"
             android:text="2"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnThree"
             android:text="3"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnSubtract"
             android:text="-"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
 
         <!-- Row 4 -->
         <Button
             android:id="@+id/btnZero"
             android:text="0"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnDecimal"
             android:text="."
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnEquals"
             android:text="="
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
         <Button
             android:id="@+id/btnAdd"
             android:text="+"
+            android:layout_margin="5dp"
             style="@style/CalculatorButton" />
 
         <!-- Row 5-->
         <Button
             android:id="@+id/btnClear"
             android:text="C"
+            android:layout_margin="5dp"
             android:layout_columnSpan="4"
             style="@style/CalculatorButton" />
     </GridLayout>
