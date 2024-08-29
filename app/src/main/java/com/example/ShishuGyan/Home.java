@@ -9,7 +9,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity {
-    LinearLayout layout,table,story,drawing,games,wiki;
+    LinearLayout layout,table,story,drawing,games,wiki,calci;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,7 @@ public class Home extends AppCompatActivity {
         drawing=findViewById(R.id.drawing_layout);
         games=findViewById(R.id.games_layout);
         wiki =findViewById(R.id.wiki_layout);
+        calci = findViewById(R.id.calci_layout);
 
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,5 +70,13 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        calci.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),com.example.ShishuGyan.Calculator.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

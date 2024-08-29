@@ -16,4 +16,7 @@
     <color name="Layout">#4CAF50</color>
     <color name="text_1">#FFFFFFFF</color>
     <color name="dog">#61FDE300</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>
