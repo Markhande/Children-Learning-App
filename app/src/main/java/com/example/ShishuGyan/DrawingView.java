@@ -9,9 +9,13 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DrawingView extends View {
-    private Paint paint;
-    private Path path;
+    private Paint currentPaint;
+    private Path currentPath;
+    private List<Stroke> strokes; // List to store all the strokes
 
     public DrawingView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -19,19 +23,30 @@ public class DrawingView extends View {
     }
 
     private void init() {
-        paint = new Paint();
-        paint.setColor(Color.BLACK);
-        paint.setAntiAlias(true);
-        paint.setStrokeWidth(10f);
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeJoin(Paint.Join.ROUND);
-        path = new Path();
+        currentPaint = new Paint();
+        currentPaint.setColor(Color.BLACK);
+        currentPaint.setAntiAlias(true);
+        currentPaint.setStrokeWidth(10f);
+        currentPaint.setStyle(Paint.Style.STROKE);
+        currentPaint.setStrokeJoin(Paint.Join.ROUND);
+
+        currentPath = new Path();
+        strokes = new ArrayList<>(); // Initialize the list of strokes
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawPath(path, paint);
+
+        // Draw all the strokes
+        for (Stroke stroke : strokes) {
+            canvas.drawPath(stroke.getPath(), stroke.getPaint());
+        }
+
+        // Draw the current stroke
+        if (currentPath != null) {
+            canvas.drawPath(currentPath, currentPaint);
+        }
     }
 
     @Override
@@ -41,12 +56,16 @@ public class DrawingView extends View {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                path.moveTo(x, y);
+                currentPath = new Path();
+                currentPath.moveTo(x, y);
                 return true;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(x, y);
+                currentPath.lineTo(x, y);
                 break;
             case MotionEvent.ACTION_UP:
+                // Add the current stroke to the list of strokes
+                strokes.add(new Stroke(currentPath, currentPaint));
+                currentPath = null;
                 break;
             default:
                 return false;
@@ -57,11 +76,31 @@ public class DrawingView extends View {
     }
 
     public void changeColor(int color) {
-        paint.setColor(color);
+        currentPaint = new Paint(currentPaint); // Create a new Paint object with the current properties
+        currentPaint.setColor(color); // Set the new color
     }
 
     public void clearDrawing() {
-        path.reset();
+        strokes.clear(); // Clear all strokes
         invalidate();
+    }
+
+    // A class to represent a stroke (a path with its paint)
+    private static class Stroke {
+        private final Path path;
+        private final Paint paint;
+
+        public Stroke(Path path, Paint paint) {
+            this.path = path;
+            this.paint = paint;
+        }
+
+        public Path getPath() {
+            return path;
+        }
+
+        public Paint getPaint() {
+            return paint;
+        }
     }
 }
