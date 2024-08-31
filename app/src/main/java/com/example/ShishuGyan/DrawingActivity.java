@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DrawingActivity extends AppCompatActivity {
     private DrawingView drawingView;
-    private Button btnRed, btnGreen, btnBlue, btnClear;
+    private Button btnRed, btnGreen, btnBlue, btnClear,btnDefault;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class DrawingActivity extends AppCompatActivity {
         btnGreen = findViewById(R.id.btnGreen);
         btnBlue = findViewById(R.id.btnBlue);
         btnClear = findViewById(R.id.btnClear);
+        btnDefault = findViewById(R.id.default_color);
 
         btnRed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,11 +48,17 @@ public class DrawingActivity extends AppCompatActivity {
             }
         });
 
+        btnDefault.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {drawingView.changeColor(Color.BLACK);}
+        });
+
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 drawingView.clearDrawing();
             }
         });
+
     }
 }
