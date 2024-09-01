@@ -55,11 +55,11 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//       games layout coding
+//       Games layout coding
         games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(), com.example.ShishuGyan.games.class);
+                Intent intent=new Intent(getApplicationContext(), Games.class);
                 startActivity(intent);
             }
         });

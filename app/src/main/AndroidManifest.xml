@@ -22,7 +22,7 @@
             android:name=".wiki"
             android:exported="false" />
         <activity
-            android:name=".games"
+            android:name=".Games"
             android:exported="false" />
         <activity
             android:name=".DrawingActivity"
