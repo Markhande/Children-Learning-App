@@ -12,29 +12,36 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Play In"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+        android:theme="@style/Theme.PlayIn"
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
             android:name=".Calculator"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".wiki"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".Games"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".DrawingActivity"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".story"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".Table"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".Animal"
+            android:theme="@style/AppTheme"
             android:exported="false" />
         <activity
             android:name=".Home"
