@@ -12,7 +12,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Play In"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/Theme.PlayIn"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
         android:supportsRtl="true"
         tools:targetApi="31">
         <activity
