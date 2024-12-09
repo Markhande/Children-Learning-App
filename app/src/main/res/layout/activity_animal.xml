@@ -82,6 +82,7 @@
             android:layout_height="60dp"
             android:background="@drawable/lion"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintEnd_toEndOf="@+id/elephant"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/elephant"
@@ -93,6 +94,7 @@
             android:layout_height="60dp"
             android:background="@drawable/snake"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="@+id/monkey"
             app:layout_constraintStart_toStartOf="@+id/monkey"
@@ -127,13 +129,13 @@
             app:layout_constraintTop_toBottomOf="@+id/fox" />
 
             <TextView
-                android:id="@+id/text_gollia"
+                android:id="@+id/text_gorilla"
                 android:layout_width="55dp"
                 android:layout_height="20dp"
                 android:hint="GOLLIA"
-                app:layout_constraintEnd_toEndOf="@+id/gollia"
-                app:layout_constraintStart_toStartOf="@+id/gollia"
-                app:layout_constraintTop_toBottomOf="@+id/gollia" />
+                app:layout_constraintEnd_toEndOf="@+id/gorilla"
+                app:layout_constraintStart_toStartOf="@+id/gorilla"
+                app:layout_constraintTop_toBottomOf="@+id/gorilla" />
 
             <TextView
                 android:layout_width="55dp"
@@ -195,6 +197,7 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/fox"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintEnd_toEndOf="@+id/bull"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/bull"
@@ -206,6 +209,7 @@
             android:layout_height="60dp"
             android:background="@drawable/zebra"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintStart_toStartOf="@+id/lion"
             app:layout_constraintTop_toTopOf="@+id/fox" />
 
@@ -224,16 +228,18 @@
             android:layout_height="60dp"
             android:background="@drawable/goat"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintStart_toStartOf="@+id/snake"
             app:layout_constraintTop_toTopOf="@+id/zebbra" />
 
             <ImageView
-                android:id="@+id/gollia"
+                android:id="@+id/gorilla"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/gorilla"
                 android:clickable="true"
+                android:contentDescription="TODO"
                 app:layout_constraintEnd_toEndOf="@+id/giraffe"
                 app:layout_constraintStart_toStartOf="@+id/giraffe"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -244,8 +250,9 @@
                 android:layout_height="60dp"
                 android:background="@drawable/alligator"
                 android:clickable="true"
+                android:contentDescription="TODO"
                 app:layout_constraintStart_toStartOf="@+id/donkey"
-                app:layout_constraintTop_toTopOf="@+id/gollia" />
+                app:layout_constraintTop_toTopOf="@+id/gorilla" />
 
             <ImageView
                 android:id="@+id/crow"
@@ -253,6 +260,7 @@
                 android:layout_height="60dp"
                 android:background="@drawable/crow"
                 android:clickable="true"
+                android:contentDescription="TODO"
                 app:layout_constraintStart_toStartOf="@+id/eagle"
                 app:layout_constraintTop_toTopOf="@+id/Alligator" />
 
@@ -263,19 +271,20 @@
                 android:layout_marginTop="32dp"
                 android:background="@drawable/giraffe"
                 android:clickable="true"
-                app:layout_constraintEnd_toEndOf="@+id/fox"
+                android:contentDescription="TODO" app:layout_constraintEnd_toEndOf="@+id/fox"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/fox"
                 app:layout_constraintTop_toBottomOf="@+id/fox" />
 
             <ImageView
-            android:id="@+id/donkey"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:background="@drawable/donkey"
-            android:clickable="true"
-            app:layout_constraintStart_toStartOf="@+id/zebbra"
-            app:layout_constraintTop_toTopOf="@+id/giraffe" />
+                android:id="@+id/donkey"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:background="@drawable/donkey"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                app:layout_constraintStart_toStartOf="@+id/zebbra"
+                app:layout_constraintTop_toTopOf="@+id/giraffe" />
 
         <ImageView
             android:id="@+id/eagle"
@@ -283,6 +292,7 @@
             android:layout_height="60dp"
             android:background="@drawable/eagle"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintStart_toStartOf="@+id/goat"
             app:layout_constraintTop_toTopOf="@+id/donkey" />
 
@@ -293,6 +303,7 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/bull"
             android:clickable="true"
+            android:contentDescription="TODO"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="@+id/tiger"
             app:layout_constraintTop_toBottomOf="@+id/tiger" />
@@ -303,7 +314,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/tiger"
-            app:layout_constraintStart_toStartOf="@+id/dog"
+            android:contentDescription="TODO" app:layout_constraintStart_toStartOf="@+id/dog"
             app:layout_constraintTop_toBottomOf="@id/dog" />
 
         <ImageView
@@ -312,7 +323,7 @@
             android:layout_height="60dp"
             android:layout_marginStart="16dp"
             android:background="@drawable/monkey"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="TODO" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/elephant"
             app:layout_constraintTop_toTopOf="@+id/tiger" />
 

@@ -1,5 +1,6 @@
     package com.example.ShishuGyan;
 
+    import android.annotation.SuppressLint;
     import android.os.Bundle;
     import android.webkit.CookieSyncManager;
     import android.webkit.WebSettings;
@@ -10,6 +11,7 @@
     public class wiki extends AppCompatActivity {
         WebView webview;
 
+        @SuppressLint("SetJavaScriptEnabled")
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);

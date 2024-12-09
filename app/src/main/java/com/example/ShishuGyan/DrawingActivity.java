@@ -8,12 +8,14 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DrawingActivity extends AppCompatActivity {
+public class DrawingActivity extends AppCompatActivity
+{
     private DrawingView drawingView;
     private Button btnRed, btnGreen, btnBlue, btnClear,btnDefault;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawing_view);
 

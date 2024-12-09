@@ -2,25 +2,22 @@ package com.example.ShishuGyan;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-import android.view.View;
 import android.widget.ImageView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Animal extends AppCompatActivity {
-
+public class Animal extends AppCompatActivity
+{
     ImageView
-            dog,    cat,    cow,    tiger,  elephant,   monkey,
-            lion,   bull,   Snake,  fox,    zebra,      goat,
-            giraffe,donkey, eagle, gollia, alligator, crow;
+            dog, cat, cow, tiger, elephant, monkey,
+            lion, bull, Snake, fox, zebra, goat,
+            giraffe, donkey, eagle, gorilla, alligator, crow;
 
     private MediaPlayer currentMediaPlayer;
-    Vibrator vibrate;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_animal);
@@ -40,171 +37,93 @@ public class Animal extends AppCompatActivity {
         giraffe = findViewById(R.id.giraffe);
         donkey = findViewById(R.id.donkey);
         eagle = findViewById(R.id.eagle);
-        gollia = findViewById(R.id.gollia);
+        gorilla = findViewById(R.id.gorilla);
         alligator = findViewById(R.id.Alligator);
         crow = findViewById(R.id.crow);
 
-        vibrate = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-
-        dog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.dog);
-                performVibration();
-            }
+        // Set OnClickListeners
+        dog.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.dog);
+            AnimalUtils.performVibration(Animal.this);
         });
 
-        cat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.cat);
-                performVibration();
-            }
+        cat.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.cat);
+            AnimalUtils.performVibration(Animal.this);
         });
 
-        cow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.cow);
-                performVibration();
-            }
+        cow.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.cow);
+            AnimalUtils.performVibration(Animal.this);
         });
 
-        tiger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.tiger);
-                performVibration();
-            }
+        tiger.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.tiger);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        elephant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.elephant);
-                performVibration();
-            }
+        elephant.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.elephant);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        monkey.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.monkey);
-                performVibration();
-            }
+        monkey.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.monkey);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        lion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.lion);
-                performVibration();
-            }
+        lion.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.lion);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        bull.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.bull);
-                performVibration();
-            }
+        bull.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.bull);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        Snake.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.snake);
-                performVibration();
-            }
+        Snake.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.snake);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        fox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.fox);
-                performVibration();
-            }
+        fox.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.fox);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        zebra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.zebra);
-                performVibration();
-            }
+        zebra.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.zebra);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        goat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.goat);
-                performVibration();
-            }
+        goat.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.goat);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        giraffe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.giraffe);
-                performVibration();
-            }
+        giraffe.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.giraffe);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        donkey.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                playAnimalSound(R.raw.donkey);
-                performVibration();
-            }
+        donkey.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.donkey);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        eagle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                performVibration();
-                playAnimalSound(R.raw.eagle);
-            }
+        eagle.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.eagle);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        gollia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                performVibration();
-                playAnimalSound(R.raw.gorilla);
-            }
+        gorilla.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.gorilla);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        alligator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                performVibration();
-                playAnimalSound(R.raw.alligator);
-            }
+        alligator.setOnClickListener(view -> {
+            currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.alligator);
+            AnimalUtils.performVibration(Animal.this);
         });
-
-        crow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                performVibration();
-                playAnimalSound(R.raw.crow);
-            }
+        crow.setOnClickListener(view -> {
+           currentMediaPlayer = AnimalUtils.playAnimalSound(Animal.this, currentMediaPlayer, R.raw.crow);
+            AnimalUtils.performVibration(Animal.this);
         });
     }
-    private void playAnimalSound(int resource)
-    {
-        if(currentMediaPlayer != null)
-        {
-            currentMediaPlayer.stop();
+    protected void onDestroy() {
+        super.onDestroy();
+        // Release the MediaPlayer when the activity is destroyed to avoid memory leaks
+        if (currentMediaPlayer != null) {
             currentMediaPlayer.release();
-        }
-            currentMediaPlayer = MediaPlayer.create(this, resource);
-            currentMediaPlayer.start();
-    }
-    private void performVibration() {
-        if (vibrate != null) {
-            VibrationEffect vibrationEffect
-            = VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE);
-            vibrate.vibrate(vibrationEffect);
+            currentMediaPlayer = null;
         }
     }
 }

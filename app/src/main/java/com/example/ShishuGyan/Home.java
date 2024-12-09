@@ -74,14 +74,14 @@ public class Home extends AppCompatActivity {
         wiki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),com.example.ShishuGyan.wiki.class);
+                Intent intent=new Intent(getApplicationContext(),wiki.class);
                 startActivity(intent);
             }
         });
         calci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),com.example.ShishuGyan.Calculator.class);
+                Intent intent=new Intent(getApplicationContext(),Calculator.class);
                 startActivity(intent);
             }
         });
